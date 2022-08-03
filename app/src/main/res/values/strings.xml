@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Messenger</string>
+    <string name="buttonSend">Отправить имя</string>
+    <string name="hintEnterMessage">Ввидите сообщение</string>
+</resources>
