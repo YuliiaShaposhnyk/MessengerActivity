@@ -21,9 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSendMessenger(View view) {
         String mess = editTextMessenger.getText().toString();
-        Intent intent = new Intent(this, ReceivedMessengerActivity.class);
-        intent.putExtra("mess", mess );
-        startActivity(intent);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, mess);
+
+        Intent chosenIntent = Intent.createChooser(intent, getString(R.string.chooserTitile));
+        startActivity(chosenIntent);
+
 
     }
 }
